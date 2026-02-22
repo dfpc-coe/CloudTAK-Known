@@ -1,0 +1,15 @@
+{
+  "name": "cloudtak-known",
+  "version": "0.1.0",
+  "description": "Generate CloudTAK known servers JSON for api.cloudtak.io via GitHub Pages.",
+  "main": "src/build.js",
+  "scripts": {
+    "build": "node src/build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

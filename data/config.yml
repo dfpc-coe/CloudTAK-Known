@@ -1,0 +1,5 @@
+version: "1.0"
+servers:
+  - name: COTAK
+    logo: cotak.png
+    url: map.cotak.gov
