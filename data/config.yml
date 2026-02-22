@@ -3,3 +3,6 @@ servers:
   - name: COTAK
     logo: cotak.png
     url: map.cotak.gov
+  - name: WFTAK
+    logo: wftak.png
+    url: map.wftak.wildfire.gov
