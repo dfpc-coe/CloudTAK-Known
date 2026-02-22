@@ -2,6 +2,10 @@
 
 A tiny Node.js + GitHub Actions pipeline that converts a YAML manifest of CloudTAK servers into a JSON payload published to GitHub Pages (custom domain: `api.cloudtak.io`). Logos are pulled from `logos/` and base64-encoded at build time.
 
+## Addition Policy
+
+Only government affiliated TAK programs will be considered for this list.
+
 ## YAML schema (`data/config.yml`)
 
 ```yaml
