@@ -6,3 +6,6 @@ servers:
   - name: WFTAK
     logo: wftak.png
     url: map.wftak.wildfire.gov
+  - name: EPATAK
+    logo: epatak.png
+    url: map.epatak.org
