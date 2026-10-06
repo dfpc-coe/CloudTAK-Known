@@ -34,6 +34,16 @@ function validateConfig(config) {
             throw new Error(`Server at index ${idx} is missing required fields (name, url, logo).`);
         }
     });
+
+    if (config.integrations !== undefined && !Array.isArray(config.integrations)) {
+        throw new Error('Config integrations must be an array.');
+    }
+
+    (config.integrations || []).forEach((integration, idx) => {
+        if (!integration.name || !integration.url) {
+            throw new Error(`Integration at index ${idx} is missing required fields (name, url).`);
+        }
+    });
 }
 
 function encodeLogo(logoFile) {
@@ -63,13 +73,18 @@ function build() {
                 base64: encodeLogo(server.logo),
             },
         })),
+        integrations: (config.integrations || []).map((integration) => ({
+            name: integration.name,
+            url: integration.url,
+            ...(integration.description ? { description: integration.description } : {}),
+        })),
     };
 
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     const outputPath = path.join(OUTPUT_DIR, OUTPUT_FILE);
     fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf8');
     fs.writeFileSync(path.join(OUTPUT_DIR, 'CNAME'), `${CUSTOM_DOMAIN}\n`, 'utf8');
-    console.log(`Wrote ${output.servers.length} servers to ${outputPath}`);
+    console.log(`Wrote ${output.servers.length} servers and ${output.integrations.length} integrations to ${outputPath}`);
 }
 
 build();

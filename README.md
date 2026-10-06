@@ -4,7 +4,10 @@ A tiny Node.js + GitHub Actions pipeline that converts a YAML manifest of CloudT
 
 ## Addition Policy
 
-Only government affiliated TAK programs will be considered for this list.
+Only government affiliated TAK programs will be considered for the servers list.
+
+Integrations are ETL tasks maintained in the `dfpc-coe` GitHub organization that bring non-TAK data sources into CloudTAK.
+The list is consumed by [CloudTAK-Docs](https://github.com/dfpc-coe/CloudTAK-Docs) to build the Integrations overview page.
 
 ## YAML schema (`data/config.yml`)
 
@@ -14,4 +17,10 @@ servers:
   - name: COTAK
     logo: cotak.png
     url: map.cotak.gov
+integrations:
+  - name: CalTopo
+    description: Ingests map objects from a shared CalTopo map
+    url: https://github.com/dfpc-coe/etl-caltopo
 ```
+
+`description` is optional for integrations and is shown on the documentation overview tile when present.

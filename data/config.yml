@@ -12,3 +12,128 @@ servers:
   - name: EPATAK
     logo: epatak.png
     url: map.epatak.org
+
+integrations:
+  - name: Active 911
+    description: "Active 911 is a service that provides real-time emergency dispatch information to first responders. It allows users to receive alerts, view incident details, and access mapping and routing features."
+    url: https://github.com/dfpc-coe/etl-active911
+  - name: ADS-B Exchange
+    description: "Ingests real-time ADS-B aircraft position data from ADS-B Exchange and posts aircraft tracks to the map."
+    url: https://github.com/dfpc-coe/etl-adsbx
+  - name: AirData
+    description: "Ingests drone flight telemetry from AirData and posts aircraft positions to the map."
+    url: https://github.com/dfpc-coe/etl-air-data
+  - name: Esri ArcGIS
+    description: "Synchronizes features with Esri ArcGIS: ingests ArcGIS Feature and Map Server layers to the map on a schedule and optionally pushes map features back out to ArcGIS."
+    url: https://github.com/dfpc-coe/etl-arcgis
+  - name: Axon
+    description: "Ingests device and unit locations from the Axon platform and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-axon
+  - name: BRINC
+    description: "Pulls BRINC UAS drone telemetry into the TAK system and posts drone positions to the map."
+    url: https://github.com/dfpc-coe/etl-brinc
+  - name: BUDDI
+    description: "Ingests BUDDI GPS tracker locations and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-buddi
+  - name: Colorado Avalanche Information Center
+    description: "Ingests avalanche forecast zones and observations from the Colorado Avalanche Information Center (CAIC) and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-caic
+  - name: CalTopo
+    description: "Ingests map objects from a shared CalTopo map, or the live Shared Locations of a CalTopo Team Account, and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-caltopo
+  - name: Cell Ping
+    description: "Receives the cell phone location emails that carriers send in response to an exigent location request and posts the location & its uncertainty to the map as Cursor-on-Target."
+    url: https://github.com/dfpc-coe/etl-cellping
+  - name: CentralSquare
+    description: "Ingests CentralSquare Public Safety Suite Professional CAD data - calls for service locations and AVL unit locations - from the Pro Suite REST API and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-central-square
+  - name: Cursor-on-Target Webhook
+    description: "Webhook endpoint that receives Cursor-on-Target events as GeoJSON or XML and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-cot
+  - name: COtrip Traffic Cameras
+    description: "Ingests traffic camera locations and imagery metadata from the Colorado COtrip system and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-cotrip-cameras
+  - name: COtrip Incidents
+    description: "Ingests road incident and closure data from the Colorado COtrip system and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-cotrip-incidents
+  - name: COtrip Snowplows
+    description: "Ingests snowplow locations from the Colorado COtrip system and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-cotrip-plows
+  - name: COtrip Dynamic Message Signs
+    description: "Ingests dynamic message sign locations and messages from the Colorado COtrip system and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-cotrip-signs
+  - name: COtrip Weather Stations
+    description: "Ingests roadside weather station observations from the Colorado COtrip system and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-cotrip-weather
+  - name: DJI FlightHub 2
+    description: "Polls the DJI FlightHub 2 OpenAPI for aircraft, dock, and remote controller locations and posts them to the map as Cursor-on-Target."
+    url: https://github.com/dfpc-coe/etl-dji-flight-hub
+  - name: DroneSense
+    description: "Ingests drone telemetry from DroneSense and posts aircraft positions to the map."
+    url: https://github.com/dfpc-coe/etl-drone-sense
+  - name: Dronetag
+    description: "Ingests Remote ID drone telemetry from Dronetag and posts aircraft positions to the map."
+    url: https://github.com/dfpc-coe/etl-drone-tag
+  - name: Ensurity Mobile
+    description: "Receives Ensurity Mobile vehicle telemetry via webhook and on a schedule and posts vehicle positions to the map."
+    url: https://github.com/dfpc-coe/etl-ensurity
+  - name: Everywhere Hub
+    description: "Ingests device and team tracking data from Everywhere Hub via webhook and scheduled cache refresh and posts positions to the map."
+    url: https://github.com/dfpc-coe/etl-everywhere-hub
+  - name: First Due
+    description: "Ingests active CAD dispatches or AVL device locations from the First Due REST API and posts each call - location, address, assigned units, dispatch message and call notes - or device to the map."
+    url: https://github.com/dfpc-coe/etl-first-due
+  - name: GeoJSON
+    description: "Fetches GeoJSON from a configurable HTTP endpoint and posts the features to the map."
+    url: https://github.com/dfpc-coe/etl-geojson
+  - name: Geotab
+    description: "Ingests fleet vehicle telematics from Geotab and posts vehicle positions to the map."
+    url: https://github.com/dfpc-coe/etl-geotab
+  - name: Inreach
+    description: "Pull InReach data into the ETL System"
+    url: https://github.com/dfpc-coe/etl-inreach
+  - name: JeffCom 911
+    description: "Ingests computer-aided dispatch (CAD) incidents and unit locations from JeffCom 911 via schedule and webhook and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-jeffcom
+  - name: NASA ACERO
+    description: "Receives NASA ACERO aircraft and mission data via webhook and posts it to the map."
+    url: https://github.com/dfpc-coe/etl-nasa-acero
+  - name: Optimus
+    description: "Ingests tracker positions from Optimus (Optimus Pro) and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-optimus
+  - name: Santa Tracker
+    description: "Posts Santa's simulated position to the map as a seasonal tracking feature."
+    url: https://github.com/dfpc-coe/etl-santa
+  - name: Shotover
+    description: "Rotates CloudTAK video lease credentials and maintains server video injectors so Shotover camera feeds stay available in TAK."
+    url: https://github.com/dfpc-coe/etl-shotover
+  - name: Skydio
+    description: "Streams live Skydio Cloud drone telemetry into TAK as Cursor-on-Target and receives Skydio webhook events for flight state, device alerts, and live stream status."
+    url: https://github.com/dfpc-coe/etl-skydio
+  - name: SkyMira
+    description: "Ingests satellite vehicle tracking messages from SkyMira and posts vehicle positions to the map."
+    url: https://github.com/dfpc-coe/etl-skymira
+  - name: Slack BSAR
+    description: "Creates a Slack channel for every SAR CoreEvent placed on a CoreEvent Board or created in a TAK Server Channel."
+    url: https://github.com/dfpc-coe/etl-slack-bsar
+  - name: Spidertracks
+    description: "Ingests aircraft tracking positions from Spidertracks and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-spider-tracks
+  - name: SPOT
+    description: "Ingests satellite GPS messenger positions from SPOT and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-spot
+  - name: Strato
+    description: "Polls a configurable Strato HTTP endpoint for GeoJSON features and posts them to the map, with optional track history handling."
+    url: https://github.com/dfpc-coe/etl-strato
+  - name: USGS Stream Gauges
+    description: "Ingests stream gauge water level and flow observations from the USGS and posts them to the map."
+    url: https://github.com/dfpc-coe/etl-usgs-gauges
+  - name: Verkada
+    description: "Ingests Verkada camera locations and manages CloudTAK video leases so camera streams are available in TAK."
+    url: https://github.com/dfpc-coe/etl-verkada
+  - name: Waze
+    description: "Ingests one collection of the Waze for Cities partner feed - user reported alerts, traffic jams or unusual traffic - and posts it to the map."
+    url: https://github.com/dfpc-coe/etl-waze
+  - name: WildWeb CAD
+    description: "Ingests wildland fire incident dispatch data from WildWeb CAD and posts incidents to the map."
+    url: https://github.com/dfpc-coe/etl-wildweb
